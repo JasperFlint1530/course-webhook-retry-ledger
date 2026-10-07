@@ -1,0 +1,22 @@
+{
+  "name": "course-webhook-retry-ledger",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx src/course_delivery_service.ts",
+    "worker": "tsx src/delivery_worker.ts",
+    "webhook:setup": "tsx src/webhook_admin.ts register",
+    "webhook:history": "tsx src/webhook_admin.ts history",
+    "test": "tsx --test test/delivery_decision.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.10",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}
